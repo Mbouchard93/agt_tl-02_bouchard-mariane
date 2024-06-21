@@ -1,0 +1,38 @@
+@use 'partials/variables' as var;
+
+
+h1 {
+    font-family: var.$playfair;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var.$lightbeige;
+    @media #{var.$lgplus} {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+}
+
+h2 {
+    font-family : var.$playfair; 
+    font-size : 1.25rem;
+    font-weight : 400;
+    @media #{var.$lgplus}{
+        font-size : 2rem;
+    }
+}
+
+h3 {
+    font-family : var.$playfair;
+    font-size : 1.125rem;
+    font-weight : 400;
+    @media #{var.$lgplus}{
+        font-size :1.5rem;
+    }
+}
+
+h4 {
+    font-family : var.$roboto;
+    font-size : 1rem; 
+    font-weight : 500;
+
+}

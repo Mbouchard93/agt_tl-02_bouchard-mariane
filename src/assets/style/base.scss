@@ -1,0 +1,79 @@
+@use 'partials/variables' as var;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 16px;
+    @media #{var.$lgplus}{
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 32px;
+    }
+}
+main{
+   max-width: 100vw;
+    place-self: center;
+    display: grid;
+    background-color: var.$beige;
+    grid-column: span 4;
+    @media #{var.$lgplus}{
+        grid-column: span 12;
+        max-width: 100rem;
+    }
+}
+
+header , footer {
+    grid-column: span 4;
+    @media #{var.$lgplus}{
+        grid-column: span 12;
+    }
+}
+  
+
+a {
+    display: block;
+    background: none;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    font: inherit;
+    outline: inherit;
+}
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+.progresse-bar{
+    width: 75%;
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    margin: 0 auto;
+    @media #{var.$lgplus}{
+        display: none;
+    }
+
+    div {
+            height: .35rem;
+            width: 25%; 
+            background-color: var.$darkBrown;
+            border-radius: 15px;
+            color: white; 
+          
+    }
+}

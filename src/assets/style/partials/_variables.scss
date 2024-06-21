@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$playfair :"Playfair Display", serif;
+$roboto : "Roboto", sans-serif;
+
+
+//COLOR
+
+$beige : #E7D2C7;
+$darkBeige : #C4967E;
+$green : #75876D;
+$darkBrown :#2E1B14;
+$lightbeige : #FEFDF6;
+
+
+
+// BREAKPOINTS
+
+$sm :360px;
+$md : 768px;
+$lg : 1280px;
+
+$smplus : "(min-width: #{$sm})";
+$lgplus: "(min-width: #{$lg})";
+$mdplus : "(min-width: #{$md})";

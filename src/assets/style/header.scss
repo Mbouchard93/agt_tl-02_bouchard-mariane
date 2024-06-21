@@ -1,0 +1,80 @@
+@use 'partials/variables' as var;
+
+
+
+header div:first-child {
+    display: flex;
+    align-items: center;
+    font-family: var.$roboto;
+    font-size: .90rem;
+    padding: 1rem;
+    a {
+        display: none;
+        @media #{var.$lgplus} {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+    }
+    .btn-retour{
+        flex: 0 1 33.3333%;
+    }
+    p {
+        width: 100%;
+        text-align: center;
+    }
+    .btn-close{
+ 
+        @media #{var.$lgplus} {
+        display: none;
+        }
+    }
+    .contact {
+        display: none;
+        @media #{var.$lgplus} {
+            display: flex;
+            flex-direction: row;
+            gap: .8rem;
+            flex: 0 1 33.3333%;
+            justify-content: end;
+        }
+    }
+}
+
+header {
+nav {
+    background-color: #c4977e7b;
+    backdrop-filter: blur(28px);
+    font-family: var.$roboto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem 0;
+    
+    .hidden_mobile {
+        display: none;
+        @media #{var.$lgplus}{
+            display: flex;
+            width: 75%;
+            justify-content: start;
+            gap: 1rem;
+            text-transform: uppercase;
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+.hidden_desktop {
+    @media #{var.$lgplus}{
+        display: none;
+    }
+}
+.nav_right{
+    display: flex;
+    gap: 1rem;
+    padding: 0 1rem 0;
+}
+}

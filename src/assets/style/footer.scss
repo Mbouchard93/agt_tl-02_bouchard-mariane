@@ -1,0 +1,137 @@
+@use 'partials/variables' as var;
+@use 'partials/mixins' as mix;
+
+
+footer {
+    background-color: var.$darkBrown;
+    color: var.$lightbeige;
+    display: grid;
+    font-weight: 300;
+    row-gap: 5rem;
+
+    nav {
+        max-width: 100rem;
+        place-self: center;
+        font-family: "Roboto", sans-serif;
+        justify-content: space-between;
+        display: grid;
+        gap: .5rem;
+        width: 100%;
+
+        @media #{var.$lgplus} {
+            grid-template-columns: repeat(5,1fr);
+        }
+
+        div:nth-child(1) {
+            display: grid;
+            gap: 1.25rem;
+            padding: 1rem;
+
+            ul {
+                li {
+                    padding: .5rem 0;
+                }
+            }
+        }
+
+        div:nth-child(2),
+        div:nth-child(3),
+        div:nth-child(4),
+        div:nth-child(5) {
+            width: 96vw;
+            padding: 1.5rem;
+            border-bottom: 1px solid white;
+            h4{
+                text-transform:uppercase ;
+            }
+            @media #{var.$lgplus} {
+                width: fit-content;
+                height: fit-content;
+                border: transparent;
+                display: grid;
+                row-gap: 1.5rem;
+                ul {
+                    @media #{var.$lgplus} {
+                       display: grid;
+                    row-gap: 1rem;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+    .container--media {
+        @media #{var.$lgplus} {
+            max-width: 100rem;
+            place-self: center;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+         }
+    
+        form {
+            display: grid;
+            width: fit-content;
+            padding: 1rem;
+            grid-template-areas:
+                'lb lb'
+                'input button';
+
+            button {
+                grid-area: button;
+                width: fit-content;
+                height: 2.5rem;
+                background-color: var.$lightbeige;
+                border-radius: 0 .3rem .3rem 0;
+            }
+
+            label {
+                grid-area: lb;
+                padding: 1rem 0;
+                text-transform: uppercase;
+
+            }
+
+            #email {
+                border-radius: .3rem 0 0 .3rem;
+                border: none;
+            }
+
+        }
+
+        img {
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+
+        div:nth-child(2) {
+            display: grid;
+            gap: 1rem;
+            padding: 1rem;
+
+            ul {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                width: fit-content;
+                gap: .5rem;
+            }
+        }
+    }
+
+    .container--reserved {
+        max-width: 100rem;
+        place-self: center;
+        padding: 1rem;
+        ul {
+            padding: 1rem 0;
+            display: grid;
+            row-gap: 1rem;
+            grid-template-columns: repeat(3,1fr);
+        }
+        p{
+            padding: 1rem 0;
+        }
+    }
+}
