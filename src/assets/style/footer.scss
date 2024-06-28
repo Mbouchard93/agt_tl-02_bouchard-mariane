@@ -8,6 +8,11 @@ footer {
     display: grid;
     font-weight: 300;
     row-gap: 5rem;
+    a:focus{
+                    
+        border: 1px solid white;
+    
+}
 
     nav {
         max-width: 100rem;
@@ -30,7 +35,7 @@ footer {
             ul {
                 li {
                     padding: .5rem 0;
-                }
+                }   
             }
         }
 

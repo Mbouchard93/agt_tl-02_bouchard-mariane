@@ -1,528 +1,787 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script src="./assets/js/main.js"></script>
+    <link rel="stylesheet" href="./assets/style/main.scss" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
-  <script src="./assets/js/main.js"></script>
-  <link rel="stylesheet" href="./assets/style/main.scss">
-</head>
-<!--TODO : vérifier toute les alt et vérifier la sémentique , uniformiser le code et vérifier l'indentation-->
-<body>
-  <header>
-    <div role="banner">
-      <a class="btn-retour" href="#">
-        <img src="./assets/img/icon/arrow-left.svg" aria-hidden="true">
-        Retour
-      </a>
-      <p>Livraison gratuite à partir de 50$ d'achat!</p>
-      <a class="btn-close">
-        <img src="./assets/img/icon/btn_close.svg" alt="Fermer la bannière">
-      </a>
-      <div class="contact">
-        <a href="#">
-          <img src="./assets/img/icon/user.svg" alt="">
-          Se connecter
+  <body>
+    <header>
+      <div role="banner">
+        <a class="btn-retour" href="#">
+          <img
+            src="./assets/img/icon/arrow-left.svg"
+            aria-label="cliquer pour retourner en arrière"
+          />
+          Retour
         </a>
-        <a href="#">
-          <img src="./assets/img/icon/msg.svg" alt="">
-          Nous contacter
+        <p>Livraison gratuite à partir de 50$ d'achat!</p>
+        <a class="btn-close">
+          <img
+            src="./assets/img/icon/btn_close.svg"
+            aria-label="fermer la bannière"
+          />
         </a>
+        <div class="contact">
+          <a href="#">
+            <img
+              src="./assets/img/icon/user.svg"
+              alt="icone profil utilisateur"
+              aria-label="cliquer pour vous connecter"
+            />
+            Se connecter
+          </a>
+          <a href="#">
+            <img
+              src="./assets/img/icon/msg.svg"
+              alt="Icone contact"
+              aria-label="cliquer pour nous contacter"
+            />
+            Nous contacter
+          </a>
+        </div>
       </div>
-    </div>
-    <nav>
-      <div class="nav_left">
-        <img class="hidden_desktop" src="./assets/img/icon/burger.svg" alt="">
+      <nav>
+        <div class="nav_left">
+          <img
+            class="hidden_desktop"
+            src="./assets/img/icon/burger.svg"
+            alt="icone du menu"
+            aria-label="cliquer pour ouvrir le menu"
+          />
+          <picture>
+            <source
+              media="(min-width:768px)"
+              srcset="./assets/img/logo_desktop.svg"
+            />
+            <img
+              src="./assets/img/logo_mobile.svg"
+              alt="Logo de l'entreprise SensSkin"
+            />
+          </picture>
+        </div>
+        <ul class="hidden_mobile">
+          <li><a href="#"> Magasiner </a></li>
+          <li><a href="#"> Découvrir </a></li>
+          <li><a href="#"> Aide </a></li>
+        </ul>
+        <div class="nav_right">
+          <a href="#"
+            ><img
+              src="./assets/img/icon/search.svg"
+              alt="icone de recherche"
+              aria-label="cliquer pour rechercher dans le site"
+          /></a>
+          <a href="#"
+            ><img
+              class="hidden_desktop"
+              src="./assets/img/icon/user.svg"
+              alt="icone utilisateur"
+              aria-label="cliquer pour vous conneter"
+          /></a>
+          <a href="#"
+            ><img
+              src="./assets/img/icon/heart.svg"
+              alt="icone favoris"
+              aria-label="cliquer pour voir vos article favoris"
+          /></a>
+          <a href="#"
+            ><img
+              src="./assets/img/icon/bag.svg"
+              alt="icone du panier d'achat"
+              aria-label="cliquer pour voir le contenue de votre panier"
+          /></a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="container--banner">
         <picture>
-          <source media="(min-width:768px)" srcset="./assets/img/logo_desktop.svg">
-          <img src="./assets/img/logo_mobile.svg" alt="Logo de l'entreprise SensSkin">
+          <source
+            media="(min-width:568px)"
+            srcset="./assets/img/banner_desktop.svg"
+          />
+          <img
+            class="banner"
+            src="./assets/img/banner_mobile.jpg"
+            alt="image de produit de beauté"
+            aria-hidden="true"
+          />
         </picture>
-      </div>
-      <ul class="hidden_mobile">
-        <a href="">
-          <li>Magasiner</li>
-        </a>
-        <a href="">
-          <li>Découvrir</li>
-        </a>
-        <a href="">
-          <li>Aide</li>
-        </a>
-      </ul>
-      <div class="nav_right">
-        <a href="#"><img src="./assets/img/icon/search.svg" alt=""></a>
-        <a href="#"><img class="hidden_desktop" src="./assets/img/icon/user.svg" alt=""></a>
-        <a href="#"><img src="./assets/img/icon/heart.svg" alt=""></a>
-        <a href="#"><img src="./assets/img/icon/bag.svg" alt=""></a>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section class="container--banner">
-      <picture>
-        <source media="(min-width:568px)" srcset="./assets/img/banner_desktop.svg">
-        <img class="banner" src="./assets/img/banner_mobile.jpg" alt="">
-      </picture>
-      <div class="text_banner">
-        <h1>Découvre ta routine personnalisée</h1>
-        <p>Apprend a conaître ta peaux dès maintenant avec Sens Skin un belle peaux pour tous.</p>
-        <button>
-          <a href="#">commencer</a>
-          <img src="./assets/img/icon/arrow--right.svg" alt="">
-        </button>
-      </div>
-    </section>
-    <section class="nav--theme">
-      <a href="#">
-        <figure>
-          <img src="./assets/img/nav_img/product0.jpg" alt="">
-          <figcaption>Nouveauté</figcaption>
-        </figure>
-      </a>
-      <a href="#">
-        <figure>
-          <img src="./assets/img/nav_img/product01.jpg" alt="">
-          <figcaption>Sérums</figcaption>
-        </figure>
-      </a>
-      <a href="#">
-        <figure>
-          <img src="./assets/img/nav_img/product02.jpg" alt="">
-          <figcaption>Exfoliants</figcaption>
-        </figure>
-      </a>
-      <a href="#">
-        <figure>
-          <img src="./assets/img/nav_img/product03.jpg" alt="">
-          <figcaption>Nettoyants</figcaption>
-        </figure>
-      </a>
-      <a href="#">
-        <figure>
-          <img src="./assets/img/nav_img/product04.jpg" alt="">
-          <figcaption>Huile</figcaption>
-        </figure>
-      </a>
-      <a href="#">
-        <figure>
-          <img src="./assets/img/nav_img/product05.jpg" alt="">
-          <figcaption>Hydratants</figcaption>
-        </figure>
-      </a>
-      <a href="#">
-        <figure>
-          <img src="./assets/img/nav_img/product06.jpg" alt="">
-          <figcaption>Toniques</figcaption>
-        </figure>
-      </a>
-      <a href="#">
-        <figure>
-          <img src="./assets/img/nav_img/product07.jpg" alt="">
-          <figcaption>Maquillage</figcaption>
-        </figure>
-      </a>
-    </section>
-    <section class="container--gift">
-      <h2>Nos ensemble cadeaux</h2>
-      <ul>
-        <li>
-          <figure class="container--img-c">
-            <img src="./assets/img/product/cadeau01.jpg" alt="">
-          </figure>
-          <h3>Ensemble Découverte</h3>
-          <p>Comprend nos produits les plus populaires, le cadeau idéal</p>
-          <a href="#">
-            Vister la boutique
-            <img src="./assets/img/icon/arrow--right.svg" aria-hidden="true">
+        <div class="text_banner">
+          <h1>Découvre ta routine personnalisée</h1>
+          <p>
+            Apprend a conaître ta peaux dès maintenant avec Sens Skin un belle
+            peaux pour tous.
+          </p>
+            <a href="#">commencer
+            <img
+              src="./assets/img/icon/arrow--right.svg"
+              alt="icone de flèche"
+              aria-hidden="true"/>
           </a>
-        </li>
-        <li>
-          <figure class="container--img-c">
-            <img src="./assets/img/product/cadeau02.jpg" alt="">
-          </figure>
-          <h3>Ensemble peaux sèche</h3>
-          <p>Ensemble dédié, hydratation intense ultime pour peaux sèches.</p>
-          <a href="#">
-            Vister la boutique
-            <img src="./assets/img/icon/arrow--right.svg" aria-hidden="true">
-          </a>
-        </li>
-      </ul>
-      <div class="progresse-bar">
-        <div>
         </div>
-      </div>
-    </section>
-    <section class="container--favorite">
-      <h3>Produit Chou-chou</h3>
-      <ul>
-        <li>
-          <figure>
-            <img src="./assets/img/favorite/favorite0.webp" alt="">
-          </figure>
-          <h4>Crème visage florale avec acide hyaluronique</h4>
-          <p>68.00 CAD</p>
-          <a href="#">
-            Commander
-          </a>
-        </li>
-        <li>
-          <figure>
-            <img src="./assets/img/favorite/favorite01.webp" alt="">
-          </figure>
-          <h4>Peeling visage apaisant avec AHA</h4>
-          <p>48.00 CAD</p>
-          <a href="#">
-            Commander
-          </a>
-        </li>
-        <li>
-          <figure>
-            <img src="./assets/img/favorite/favorite02.webp" alt="">
-          </figure>
-          <h4>Sérum visage éclaircissant avec vitamine C et Squalane</h4>
-          <p>82.00 CAD</p>
-          <a href="#">
-            Commander
-          </a>
-        </li>
-        <li>
-          <figure>
-            <img src="./assets/img/favorite/favorite03.webp" alt="">
-          </figure>
-          <h4>Crème visage aux superfruits avec Bakuchiol</h4>
-          <p>68.00 CAD</p>
-          <a href="#">
-            Commander
-          </a>
-        </li>
-      </ul>
-      <div class="progresse-bar">
-        <div>
-        </div>
-      </div>
-    </section>
-    <section class="container--other">
-      <h3>Ce que les autres on acheté</h3>
-      <ul>
-        <li>
-          <figure>
-            <img src="./assets/img/other/other01.webp" alt="">
-          </figure>
-          <h4>Éponge konjac nettoyante - Curcuma éclaircissant</h4>
-          <p>12.00 CAD</p>
-          <a href="#">
-            Commander
-          </a>
-        </li>
-        <li>
-          <figure>
-            <img src="./assets/img/other/other02.webp" alt="">
-          </figure>
-          <h4>Crème visage aux algues marines</h4>
-          <p>68.00 CAD</p>
-          <a href="#">
-            Commander
-          </a>
-        </li>
-        <li>
-          <figure>
-            <img src="./assets/img/other/other03.webp" alt="">
-          </figure>
-          <h4>Masque exfoliant revitalisant pour cuir chevelu avec AHA</h4>
-          <p>62.00 CAD</p>
-          <a href="#">
-            Commander
-          </a>
-        </li>
-        <li>
-          <figure>
-            <img src="./assets/img/other/other04.webp" alt="">
-          </figure>
-          <h4>Baume à lèvres - Petits Fruits</h4>
-          <p>8.00 CAD</p>
-          <a href="#">
-            Commander
-          </a>
-        </li>
-      </ul>
-      <div class="progresse-bar">
-        <div>
-        </div>
-      </div>
-    </section>
-    <section class="container-video-crueltyfree">
-      <figure>
-        <video autoplay loop muted>
-          <source src="./assets/img/1104974_1080p_Energy_1280x720.mp4" type="video/mp4">
-          Votre navigateur ne supporte pas la vidéo.
-        </video>
-      </figure>
-      <div>
-        <h3>Nous pensons à la planète nos produit sont vegan et sans cruauté animal</h3>
-        <a href="#">
-          Contribuer
-          <img src="./assets/img/icon/arrow--right-withe.svg" aria-hidden="true">
-        </a>
-        <a href="#">
-          Boutique
-          <img src="./assets/img/icon/arrow--right-withe.svg" aria-hidden="true">
-        </a>
-      </div>
-    </section>
-    <section class="container--crueltyfree">
-      <h3>Verte Conscience : Beauté Vegan et Sans Cruauté</h3>
-      <ul>
-        <li>
-          <figure>
-            <img src="./assets/img/cureltyfree/crueltyfree01.jpg" alt="">
-          </figure>
-          <h4>Solidarité Animale : 2% Pour Leurs Sourires </h4>
-          <p>Agissez maintenant et faites partie de cette belle initiative.</p>
-          <a href="#">
-            En savoir plus
-          </a>
-        </li>
-        <li>
-          <figure>
-            <img src="./assets/img/cureltyfree/crueltyfree02.jpg" alt="">
-          </figure>
-          <h4>Éco-Expédition : Emballages Biodégradables</h4>
-          <p>Optez pour l’éco-responsable et préservez notre planète.</p>
-          <a href="#">
-            En savoir plus
-          </a>
-        </li>
-        <li>
-          <figure>
-            <img src="./assets/img/cureltyfree/crueltyfree03.jpg" alt="">
-          </figure>
-          <h4>Zéro Déchet : Choisissez le Vrac </h4>
-          <p>Passez au vrac et révolutionnez votre routine beauté.</p>
-          <a href="#">
-            En savoir plus
-          </a>
-        </li>
-        <li>
-          <figure>
-            <img src="./assets/img/cureltyfree/crueltyfree04.jpg" alt="">
-          </figure>
-          <h4>Innovation Verte : Formules Écoresponsables</h4>
-          <p>Rejoignez le mouvement pour une beauté durable et efficace.</p>
-          <a href="#">
-            En savoir plus
-          </a>
-        </li>
-      </ul>
-      <div class="progresse-bar">
-        <div>
-        </div>
-      </div>
-    </section>
-    <section class="container--sample">
-      <div class="text">
-        <h2>Indécis(e) ? Nos échantillons en format découverte sont faits pour vous !</h2>
-        <p>Parfait pour tester et tomber amoureux de nos produits, ils sont l’introduction idéale à une peau choyée et
-          chouchoutée.</p>
-      </div>
-      <div class="img">
-        <figure>
-          <img src="./assets/img/sample/promo01.jpg" alt="Description de l'image">
-          <figcaption>
-            <a href="#">Visiter la boutique</a>
-          </figcaption>
-        </figure>
-        <figure>
-          <img src="./assets/img/sample/promo02.jpg" alt="Description de l'image">
-          <figcaption>
-            <a href="#">Visiter la boutique</a>
-          </figcaption>
-        </figure>
-        <figure>
-          <img src="./assets/img/sample/promo03.jpg" alt="Description de l'image">
-          <figcaption>
-            <a href="#">Visiter la boutique</a>
-          </figcaption>
-        </figure>
-        <figure>
-          <img src="./assets/img/sample/promo04.jpg" alt="Description de l'image">
-          <figcaption>
-            <a href="#">Visiter la boutique</a>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-    <section class="container--reward">
+      </section>
+      <nav class="nav--theme">
+        <ul>
+          <li >
+            <a href="#">
+              <figure tabindex="0">
+                <img
+                  src="./assets/img/nav_img/product0.jpg"
+                  alt="image des nouveaux produit"
+                  aria-label="cliquer pour voir les produits"
+                />
+                <figcaption>Nouveauté</figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <figure tabindex="0">
+                <img
+                  src="./assets/img/nav_img/product01.jpg"
+                  alt="image des Sérum"
+                  aria-label="cliquer pour voir les produits"
+                />
+                <figcaption>Sérums</figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <figure tabindex="0">
+                <img
+                  src="./assets/img/nav_img/product02.jpg"
+                  alt="image des Exfoliants"
+                  aria-label="cliquer pour voir les produits"
+                />
+                <figcaption>Exfoliants</figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <figure tabindex="0">
+                <img
+                  src="./assets/img/nav_img/product03.jpg"
+                  alt="image des Nettoyants"
+                  aria-label="cliquer pour voir les produits"
+                />
+                <figcaption>Nettoyants</figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <figure tabindex="0">
+                <img
+                  src="./assets/img/nav_img/product04.jpg"
+                  alt="image des Huile"
+                  aria-label="cliquer pour voir les produits"
+                />
+                <figcaption>Huile</figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <figure tabindex="0">
+                <img
+                  src="./assets/img/nav_img/product05.jpg"
+                  alt="image des Hydratants"
+                  aria-label="cliquer pour voir les produits"
+                />
+                <figcaption>Hydratants</figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <figure tabindex="0">
+                <img
+                  src="./assets/img/nav_img/product06.jpg"
+                  alt="image des Toniques"
+                  aria-label="cliquer pour voir les produits"
+                />
+                <figcaption>Toniques</figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <figure tabindex="0">
+                <img
+                  src="./assets/img/nav_img/product07.jpg"
+                  alt="image du Maquillage"
+                  aria-label="cliquer pour voir les produits"
+                />
+                <figcaption>Maquillage</figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-      <div class="reward--lg">
-        <figure>
-          <img src="./assets/img/reward/reward01.jpg" alt="">
-        </figure>
-        <div class="text-reward">
-          <h3>Plus d’Avantages avec l’Abonnement</h3>
-          <p>Accumulez des points et profitez de réductions exclusives en vous abonnant à vos soins favoris.</p>
-          <a href="#">
-            Boutique
-            <img src="./assets/img/icon/arrow--right-withe.svg" aria-hidden="true">
-          </a>
+      <section class="container--gift">
+        <h2>Nos ensemble cadeaux</h2>
+        <ul>
+          <li>
+            <figure class="container--img-c">
+              <img
+                src="./assets/img/product/cadeau01.jpg"
+                alt="image des produit de beauté compris dans l'ensemble découverte"
+                aria-hidden="true"
+              />
+            </figure>
+            <h3>Ensemble Découverte</h3>
+            <p>Comprend nos produits les plus populaires, le cadeau idéal</p>
+            <a href="#">
+              Vister la boutique
+              <img
+                src="./assets/img/icon/arrow--right.svg"
+                aria-hidden="true"
+              />
+            </a>
+          </li>
+          <li>
+            <figure class="container--img-c">
+              <img
+                src="./assets/img/product/cadeau02.jpg"
+                alt="image des produit de beauté compris dans l'ensemble peaux sèche"
+                aria-hidden="true"
+              />
+            </figure>
+            <h3>Ensemble peaux sèche</h3>
+            <p>Ensemble dédié, hydratation intense ultime pour peaux sèches.</p>
+            <a href="#">
+              Vister la boutique
+              <img
+                src="./assets/img/icon/arrow--right.svg"
+                aria-hidden="true"
+              />
+            </a>
+          </li>
+        </ul>
+        <div class="progresse-bar">
+          <div></div>
         </div>
-      </div>
-      <div class="reward--sm">
-        <figure>
-          <img src="./assets/img/reward/reward02.jpg" alt="">
-        </figure>
-        <div class="text-reward">
-          <h3>Club Fidélité Élite</h3>
-          <p>Rejoignez notre club d’élite et transformez vos achats en récompenses.!</p>
-          <a href="#">
-            Boutique
-            <img src="./assets/img/icon/arrow--right-withe.svg" aria-hidden="true">
-          </a>
+      </section>
+      <section class="container--favorite">
+        <h3>Produit Chou-chou</h3>
+        <ul>
+          <li>
+            <figure>
+              <img
+                src="./assets/img/favorite/favorite0.webp"
+                alt="image de notre créme pour visage florale"
+              />
+            </figure>
+            <h4>Crème visage florale avec acide hyaluronique</h4>
+            <p>68.00 CAD</p>
+            <a href="#"> Commander </a>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="./assets/img/favorite/favorite01.webp"
+                alt="image de notre peeling apaisant "
+              />
+            </figure>
+            <h4>Peeling visage apaisant avec AHA</h4>
+            <p>48.00 CAD</p>
+            <a href="#"> Commander </a>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="./assets/img/favorite/favorite02.webp"
+                alt="image de notre Sérums éclaircissant"
+              />
+            </figure>
+            <h4>Sérum visage éclaircissant avec vitamine C et Squalane</h4>
+            <p>82.00 CAD</p>
+            <a href="#"> Commander </a>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="./assets/img/favorite/favorite03.webp"
+                alt="image de notre crème visage aux superfruits"
+              />
+            </figure>
+            <h4>Crème visage aux superfruits avec Bakuchiol</h4>
+            <p>68.00 CAD</p>
+            <a href="#"> Commander </a>
+          </li>
+        </ul>
+        <div class="progresse-bar">
+          <div></div>
         </div>
-      </div>
-      <div class="reward--sm">
-        <figure>
-          <img src="./assets/img/reward/reward03.jpg" alt="">
-        </figure>
-        <div class="text-reward">
-          <h3>Plus vous achetez, plus vous gagnez !</h3>
-          <p>Avec les achats en gros, accumulez des points à la vitesse supérieure.</p>
-          <a href="#">
-            Boutique
-            <img src="./assets/img/icon/arrow--right-withe.svg" aria-hidden="true">
-          </a>
+      </section>
+      <section class="container--other">
+        <h3>Ce que les autres on acheté</h3>
+        <ul>
+          <li>
+            <figure>
+              <img
+                src="./assets/img/other/other01.webp"
+                alt="image de notre éponge de konjac au curcuma"
+              />
+            </figure>
+            <h4>Éponge konjac nettoyante - Curcuma éclaircissant</h4>
+            <p>12.00 CAD</p>
+            <a href="#"> Commander </a>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="./assets/img/other/other02.webp"
+                alt="image de notre crème au algues marine "
+              />
+            </figure>
+            <h4>Crème visage aux algues marines</h4>
+            <p>68.00 CAD</p>
+            <a href="#"> Commander </a>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="./assets/img/other/other03.webp"
+                alt="image d'un main tenant notre masque exfoliant"
+              />
+            </figure>
+            <h4>Masque exfoliant revitalisant pour cuir chevelu avec AHA</h4>
+            <p>62.00 CAD</p>
+            <a href="#"> Commander </a>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="./assets/img/other/other04.webp"
+                alt="image de notre beaume à lèvres"
+              />
+            </figure>
+            <h4>Baume à lèvres - Petits Fruits</h4>
+            <p>8.00 CAD</p>
+            <a href="#"> Commander </a>
+          </li>
+        </ul>
+        <div class="progresse-bar">
+          <div></div>
         </div>
-      </div>
-    </section>
-    <section class="container--article">
-      <h2>Maîtrisez l’Art du Soin de la Peau</h2>
-      <ul>
-        <li>
-          <figure class="container--img-c">
-            <img src="./assets/img/article/article02.jpg" alt="">
-          </figure>
-          <h3>Routine Skincare : 5 Étapes Clés</h3>
-          <p>Nettoyage, tonification, traitement – découvrez comment.</p>
-          <a href="#">
-            Lire l'artcile
-            <img src="./assets/img/icon/arrow--right.svg" aria-hidden="true">
-          </a>
-        </li>
-        <li>
-          <figure class="container--img-c">
-            <img src="./assets/img/article/article01.jpg" alt="">
-          </figure>
-          <h3>Hydratation : Votre Allié Beauté</h3>
-          <p>Choisissez l’hydratant parfait pour une peau lumineuse.</p>
-          <a href="#">
-            Lire l'article
-            <img src="./assets/img/icon/arrow--right.svg" aria-hidden="true">
-          </a>
-        </li>
-      </ul>
-      <div class="progresse-bar">
+      </section>
+      <section class="container-video-crueltyfree">
+        <figure>
+          <video autoplay loop muted>
+            <source
+              src="./assets/img/1104974_1080p_Energy_1280x720.mp4"
+              type="video/mp4"
+            />
+            Votre navigateur ne supporte pas la vidéo.
+          </video>
+        </figure>
         <div>
+          <h3>
+            Nous pensons à la planète nos produit sont vegan et sans cruauté
+            animal
+          </h3>
+          <a href="#">
+            Contribuer
+            <img
+              src="./assets/img/icon/arrow--right-withe.svg"
+              aria-hidden="true"
+            />
+          </a>
+          <a href="#">
+            Boutique
+            <img
+              src="./assets/img/icon/arrow--right-withe.svg"
+              aria-hidden="true"
+            />
+          </a>
         </div>
-      </div>
-    </section>
-    <section class="container--welcom">
-      <div>
-        <p class="none-mobile">Découvrez l’univers dédié à la beauté et au bien-être de votre peau. Notre espace est le
-          sanctuaire des soins
-          d’exception, des idées cadeaux personnalisées et des formulations innovantes pour sublimer la beauté naturelle
-          de chacun, jeunes comme moins jeunes. Sélectionnez avec aisance le présent parfait pour marquer les moments
-          importants : anniversaires, fêtes romantiques ou célébrations familiales. Chez nous, vous trouverez aisément
-          des
-          produits promettant détente et éclat. Et pour les connaisseurs, notre sélection spéciale pour adultes saura
-          répondre à toutes les attentes spécifiques : soins régénérants, beauté bio, nouveautés tendance… et plus
-          encore
-          ! <a href="">Afficher plus</a></p>
-        <p class="none-desktop">Découvrez l’univers dédié à la beauté et au bien-être de votre peau. Notre espace est le
-          sanctuaire des soins
-          d’exception, des idées cadeaux personnalisées et des formulations innovantes pour sublimer la beauté naturelle
-          de chacun, jeunes comme moins jeunes.<a href="">Afficher plus</a></p>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <nav >
-      <div >
-        <picture>
-          <source media="(min-width:768px)" srcset="./assets/img/logo_desktop.svg">
-          <img src="./assets/img/logo_mobile.svg" alt="Logo de l'entreprise SensSkin">
-        </picture>
+      </section>
+      <section class="container--crueltyfree">
+        <h3>Verte Conscience : Beauté Vegan et Sans Cruauté</h3>
         <ul>
-          <li><a href="#">Cartes-cadeaux</a></li>
-          <li><a href="#">Trouve ta routine</a></li>
-          <li><a href="#">Catalogue</a></li>
-          <li><a href="#">Trouver un magasin</a></li>
+          <li>
+            <figure>
+              <img
+                src="./assets/img/cureltyfree/crueltyfree01.jpg"
+                alt="image d'une femme souriant, accompagner d'un chien"
+              />
+            </figure>
+            <h4>Solidarité Animale : 2% Pour Leurs Sourires</h4>
+            <p>
+              Agissez maintenant et faites partie de cette belle initiative.
+            </p>
+            <a href="#"> En savoir plus </a>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="./assets/img/cureltyfree/crueltyfree02.jpg"
+                alt="image de produit dans un sac écologique accompagner d'une étiquette écrie éco"
+              />
+            </figure>
+            <h4>Éco-Expédition : Emballages Biodégradables</h4>
+            <p>Optez pour l’éco-responsable et préservez notre planète.</p>
+            <a href="#"> En savoir plus </a>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="./assets/img/cureltyfree/crueltyfree03.jpg"
+                alt="Image de plusieurs contenant de produits de beauté."
+              />
+            </figure>
+            <h4>Zéro Déchet : Choisissez le Vrac</h4>
+            <p>Passez au vrac et révolutionnez votre routine beauté.</p>
+            <a href="#"> En savoir plus </a>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="./assets/img/cureltyfree/crueltyfree04.jpg"
+                alt="image de plusieurs produits de beauté écologique"
+              />
+            </figure>
+            <h4>Innovation Verte : Formules Écoresponsables</h4>
+            <p>Rejoignez le mouvement pour une beauté durable et efficace.</p>
+            <a href="#"> En savoir plus </a>
+          </li>
         </ul>
-      </div>
-      <div>
-        <h4>à notre sujet</h4>
-        <ul class="none-mobile">
-          <li><a href="#">Au sujet de SensSkin</a></li>
-          <li><a href="#">Actualités</a></li>
-          <li><a href="#">Efficacité</a></li>
-          <li><a href="#">Collaborations</a></li>
-          <li><a href="#">Emplois chez nous</a></li>
-          <li><a href="#">Politique de confidentialité</a></li>
-          <li><a href="#">Certification</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Assistance</h4>
-        <ul class="none-mobile">
-          <li><a href="#">Communiquer avec nous</a></li>
-          <li><a href="#">Utilisations d'un produit</a></li>
-          <li><a href="#">Produit défectueux</a></li>
-          <li><a href="#">Expédition et retour</a></li>
-          <li><a href="#">Mode de paiements</a></li>
-          <li><a href="#">Conditions générales</a></li>
-          <li><a href="#">Rappels de produits</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Programme fidélité</h4>
-        <ul class="none-mobile">
-          <li><a href="#">Recompenses</a></li>
-          <li><a href="#">Points fidélité</a></li>
-          <li><a href="#">FAQ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>d’Avantages sur nous</h4>
-        <ul class="none-mobile">
-          <li><a href="#">Produit naturel</a></li>
-          <li><a href="#">Vegane</a></li>
-          <li><a href="#">Compostable et Biodégradable</a></li>
-          <li><a href="#">Achat en vrac</a></li>
-        </ul>
-      </div>
-    </nav>
-    <section class="container--media">
-      <div>
-        <form method="post">
-          <label for="email">Inscrit toi a l'infolettre pour ne rien manquer</label>
-          <input type="email" id="email" name="email" required>
-          <button type="submit">
-            <img src="./assets/img/icon/arrow--right.svg" alt="Flèche">
-          </button>
-        </form>
-      </div>
-      <div >
-        <h4>Nous suivre</h4>
+        <div class="progresse-bar">
+          <div></div>
+        </div>
+      </section>
+      <section class="container--sample">
+        <div class="text">
+          <h2>
+            Indécis(e) ? Nos échantillons en format découverte sont faits pour
+            vous !
+          </h2>
+          <p>
+            Parfait pour tester et tomber amoureux de nos produits, ils sont
+            l’introduction idéale à une peau choyée et chouchoutée.
+          </p>
+        </div>
+        <div class="img">
+          <figure>
+            <img
+              src="./assets/img/sample/promo01.jpg"
+              alt="image d'échantillons de notre huile"
+              aria-label="cliquer pour voir le produit"
+            />
+            <figcaption>
+              <a href="#">Visiter la boutique</a>
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="./assets/img/sample/promo02.jpg"
+              alt="image d'échantillons de notre sérum"
+              aria-label="cliquer pour voir le produit"
+            />
+            <figcaption>
+              <a href="#">Visiter la boutique</a>
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="./assets/img/sample/promo03.jpg"
+              alt="image d'échantillons crème"
+              aria-label="cliquer pour voir le produit"
+            />
+            <figcaption>
+              <a href="#">Visiter la boutique</a>
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="./assets/img/sample/promo04.jpg"
+              alt="image de nos équipements en petit format"
+              aria-label="cliquer pour voir le produit"
+            />
+            <figcaption>
+              <a href="#">Visiter la boutique</a>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="container--reward">
+        <div class="reward--lg">
+          <figure>
+            <img
+              src="./assets/img/reward/reward01.jpg"
+              alt="image d'une trousse de produits contenant plusieurs produits"
+            />
+          </figure>
+          <div class="text-reward">
+            <h3>Plus d’Avantages avec l’Abonnement</h3>
+            <p>
+              Accumulez des points et profitez de réductions exclusives en vous
+              abonnant à vos soins favoris.
+            </p>
+            <a href="#">
+              Boutique
+              <img
+                src="./assets/img/icon/arrow--right-withe.svg"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="reward--sm">
+          <figure>
+            <img
+              src="./assets/img/reward/reward02.jpg"
+              alt="Deux femmes avec un masque de beauté sur le visage"
+            />
+          </figure>
+          <div class="text-reward">
+            <h3>Club Fidélité Élite</h3>
+            <p>
+              Rejoignez notre club d’élite et transformez vos achats en
+              récompenses.!
+            </p>
+            <a href="#">
+              Boutique
+              <img
+                src="./assets/img/icon/arrow--right-withe.svg"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="reward--sm">
+          <figure>
+            <img
+              src="./assets/img/reward/reward03.jpg"
+              alt="panier comprenant plusieurs gros format de produits"
+            />
+          </figure>
+          <div class="text-reward">
+            <h3>Plus vous achetez, plus vous gagnez !</h3>
+            <p>
+              Avec les achats en gros, accumulez des points à la vitesse
+              supérieure.
+            </p>
+            <a href="#">
+              Boutique
+              <img
+                src="./assets/img/icon/arrow--right-withe.svg"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="container--article">
+        <h2>Maîtrisez l’Art du Soin de la Peau</h2>
         <ul>
-          <li><a href="#"><img src="./assets/img/meida/fb.svg" alt="Logo facebook"></a></li>
-          <li><a href="#"><img src="./assets/img/meida/insta.svg" alt="Logo instagram"></a></li>
-          <li><a href="#"><img src="./assets/img/meida/twitter.svg" alt="Logo Twitter"></a></li>
-          <li><a href="#"><img src="./assets/img/meida/youtube.svg" alt="Logo youtube"></a></li>
+          <li>
+            <figure class="container--img-c">
+              <img
+                src="./assets/img/article/article02.jpg"
+                alt="Femme qui s'apprête à mettre un masque de soin sur son visage"
+              />
+            </figure>
+            <h3>Routine Skincare : 5 Étapes Clés</h3>
+            <p>Nettoyage, tonification, traitement – découvrez comment.</p>
+            <a href="#">
+              Lire l'artcile
+              <img
+                src="./assets/img/icon/arrow--right.svg"
+                aria-hidden="true"
+              />
+            </a>
+          </li>
+          <li>
+            <figure class="container--img-c">
+              <img
+                src="./assets/img/article/article01.jpg"
+                alt="femme qui tient un contenant d'huile dans les mains"
+              />
+            </figure>
+            <h3>Hydratation : Votre Allié Beauté</h3>
+            <p>Choisissez l’hydratant parfait pour une peau lumineuse.</p>
+            <a href="#">
+              Lire l'article
+              <img
+                src="./assets/img/icon/arrow--right.svg"
+                aria-hidden="true"
+              />
+            </a>
+          </li>
+          <li>
+            <figure class="container--img-c">
+              <img
+                src="./assets/img/article/article03.jpg"
+                alt="Femme Nettoyant sa peau"
+              />
+            </figure>
+            <h3>Secrets d’une Dermatologie Éclatante</h3>
+            <p>
+              Découvrez les techniques incontournables et les conseils d’experts
+            </p>
+            <a href="#">
+              Lire l'article
+              <img
+                src="./assets/img/icon/arrow--right.svg"
+                aria-hidden="true"
+              />
+            </a>
+          </li>
         </ul>
-      </div>
-    </section>
-    <section class="container--reserved">
+        <div class="progresse-bar">
+          <div></div>
+        </div>
+      </section>
+      <section class="container--welcom">
+        <div>
+          <p class="none-mobile">
+            Découvrez l’univers dédié à la beauté et au bien-être de votre peau.
+            Notre espace est le sanctuaire des soins d’exception, des idées
+            cadeaux personnalisées et des formulations innovantes pour sublimer
+            la beauté naturelle de chacun, jeunes comme moins jeunes.
+            Sélectionnez avec aisance le présent parfait pour marquer les
+            moments importants : anniversaires, fêtes romantiques ou
+            célébrations familiales. Chez nous, vous trouverez aisément des
+            produits promettant détente et éclat. Et pour les connaisseurs,
+            notre sélection spéciale pour adultes saura répondre à toutes les
+            attentes spécifiques : soins régénérants, beauté bio, nouveautés
+            tendance… et plus encore ! <a href="">Afficher plus</a>
+          </p>
+          <p class="none-desktop">
+            Découvrez l’univers dédié à la beauté et au bien-être de votre peau.
+            Notre espace est le sanctuaire des soins d’exception, des idées
+            cadeaux personnalisées et des formulations innovantes pour sublimer
+            la beauté naturelle de chacun, jeunes comme moins jeunes.<a href=""
+              >Afficher plus</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <div>
+          <picture>
+            <source
+              media="(min-width:768px)"
+              srcset="./assets/img/logo_desktop.svg"
+            />
+            <img
+              src="./assets/img/logo_mobile.svg"
+              alt="Logo de l'entreprise SensSkin"
+            />
+          </picture>
+          <ul>
+            <li><a href="#">Cartes-cadeaux</a></li>
+            <li><a href="#">Trouve ta routine</a></li>
+            <li><a href="#">Catalogue</a></li>
+            <li><a href="#">Trouver un magasin</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>à notre sujet</h4>
+          <ul class="none-mobile">
+            <li><a href="#">Au sujet de SensSkin</a></li>
+            <li><a href="#">Actualités</a></li>
+            <li><a href="#">Efficacité</a></li>
+            <li><a href="#">Collaborations</a></li>
+            <li><a href="#">Emplois chez nous</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+            <li><a href="#">Certification</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Assistance</h4>
+          <ul class="none-mobile">
+            <li><a href="#">Communiquer avec nous</a></li>
+            <li><a href="#">Utilisations d'un produit</a></li>
+            <li><a href="#">Produit défectueux</a></li>
+            <li><a href="#">Expédition et retour</a></li>
+            <li><a href="#">Mode de paiements</a></li>
+            <li><a href="#">Conditions générales</a></li>
+            <li><a href="#">Rappels de produits</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Programme fidélité</h4>
+          <ul class="none-mobile">
+            <li><a href="#">Recompenses</a></li>
+            <li><a href="#">Points fidélité</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>d’Avantages sur nous</h4>
+          <ul class="none-mobile">
+            <li><a href="#">Produit naturel</a></li>
+            <li><a href="#">Vegane</a></li>
+            <li><a href="#">Compostable et Biodégradable</a></li>
+            <li><a href="#">Achat en vrac</a></li>
+          </ul>
+        </div>
+      </nav>
+      <section class="container--media">
+        <div>
+          <form method="post">
+            <label for="email"
+              >Inscrit toi a l'infolettre pour ne rien manquer</label
+            >
+            <input type="email" id="email" name="email" required />
+            <button type="submit">
+              <img src="./assets/img/icon/arrow--right.svg" alt="Flèche" />
+            </button>
+          </form>
+        </div>
+        <div>
+          <h4>Nous suivre</h4>
+          <ul>
+            <li>
+              <a href="#"
+                ><img
+                  src="./assets/img/meida/fb.svg"
+                  alt="Logo facebook"
+                  aria-label="cliquer pour visiter notre facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./assets/img/meida/insta.svg"
+                  alt="Logo instagram"
+                  aria-label="cliquer pour visiter notre page instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./assets/img/meida/twitter.svg"
+                  alt="Logo Twitter"
+                  aria-label="cliquer pour visiter notre page twitter"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./assets/img/meida/youtube.svg"
+                  alt="Logo youtube"
+                  aria-label="cliquer pour visiter notre chaîne YouTube"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="container--reserved">
         <ul>
           <li><a href="#">Politique de confidentialité</a></li>
           <li><a href="#">témois</a></li>
@@ -531,12 +790,17 @@
           <li><a href="#">Accessibilité</a></li>
           <li><a href="#">Paramètres des témoins</a></li>
         </ul>
-      <div >
-        <p>SensSkin Inc., QC H2Y 1C6 Montréal, Québec, Canada. Vous devez être âgé de 18 ans ou plus pour effectuer des achats en ligne. SensSkin et le logo SensSkin sont des marques de commerce de SensSkin Inc. ©2024 SensSkin Inc. Tous droits réservés. L’utilisation de ce site implique que vous en acceptez les conditions générales d’utilisation.</p>
-      </div>
-    </section>
-  </footer>
-
-</body>
-
+        <div>
+          <p>
+            SensSkin Inc., QC H2Y 1C6 Montréal, Québec, Canada. Vous devez être
+            âgé de 18 ans ou plus pour effectuer des achats en ligne. SensSkin
+            et le logo SensSkin sont des marques de commerce de SensSkin Inc.
+            ©2024 SensSkin Inc. Tous droits réservés. L’utilisation de ce site
+            implique que vous en acceptez les conditions générales
+            d’utilisation.
+          </p>
+        </div>
+      </section>
+    </footer>
+  </body>
 </html>

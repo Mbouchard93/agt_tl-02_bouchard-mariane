@@ -24,7 +24,7 @@ header div:first-child {
         text-align: center;
     }
     .btn-close{
- 
+        display: flex;
         @media #{var.$lgplus} {
         display: none;
         }
